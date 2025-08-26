@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Деревянные полы - Профессиональная укладка и реставрация</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .before-after {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .before-after img {
+            width: 100%;
+            display: block;
+        }
+        
+        .slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: white;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+        }
+        
+        .slider-handle:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-tree text-amber-800 text-2xl mr-2"></i>
+                <h1 class="text-xl font-bold text-amber-900">Деревянные полы</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-amber-700 transition">Услуги</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-amber-700 transition">Портфолио</a>
+                <a href="#about" class="text-gray-700 hover:text-amber-700 transition">О нас</a>
+                <a href="#reviews" class="text-gray-700 hover:text-amber-700 transition">Отзывы</a>
+                <a href="#contact" class="text-gray-700 hover:text-amber-700 transition">Контакты</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#services" class="block py-2 text-gray-700 hover:text-amber-700 transition">Услуги</a>
+            <a href="#portfolio" class="block py-2 text-gray-700 hover:text-amber-700 transition">Портфолио</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-amber-700 transition">О нас</a>
+            <a href="#reviews" class="block py-2 text-gray-700 hover:text-amber-700 transition">Отзывы</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-amber-700 transition">Контакты</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero h-screen flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-4 text-center animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Профессиональная укладка и реставрация деревянных полов</h1>
+            <p class="text-xl md:text-2xl mb-8">Превращаем ваши полы в произведение искусства с 15-летним опытом</p>
+            <a href="#contact" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Бесплатная консультация</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-16">Наши услуги</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-ruler-combined text-6xl text-amber-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-amber-800">Укладка деревянных полов</h3>
+                        <p class="text-gray-600">Профессиональная укладка паркета, массивной доски, инженерной доски и ламината с гарантией качества.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Традиционные и художественные схемы</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Использование качественных материалов</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Соблюдение всех технологических норм</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-broom text-6xl text-amber-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-amber-800">Реставрация и циклевка</h3>
+                        <p class="text-gray-600">Восстановление старых деревянных полов до состояния "как новые" с сохранением их уникального характера.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Удаление глубоких царапин и дефектов</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Шлифовка и полировка поверхности</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Нанесение защитных покрытий</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-amber-100 flex items-center justify-center">
+                        <i class="fas fa-paint-roller text-6xl text-amber-700"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-amber-800">Покрытие и обработка</h3>
+                        <p class="text-gray-600">Нанесение защитных и декоративных покрытий для продления срока службы и улучшения внешнего вида полов.</p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Масла, лаки, воски</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Экологически безопасные составы</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                <span>Тонировка и браширование</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-16">Наши работы</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1583845112208-9da9692afd2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Укладка паркета" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Укладка паркета "Ёлочка"</h3>
+                            <p>Квартира в центре Москвы, 45 м²</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600046050370-2fc95f59f250?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Реставрация пола" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Реставрация дубового пола</h3>
+                            <p>Загородный дом, Подмосковье, 120 м²</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Художественный паркет" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Художественный паркет</h3>
+                            <p>Особняк, Москва, 25 м²</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Циклевка пола" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Циклевка старого пола</h3>
+                            <p>Сталинский дом, Москва, 60 м²</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600566752227-8a2d4ce8d3a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Укладка массивной доски" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Укладка массивной доски</h3>
+                            <p>Новостройка, Москва, 85 м²</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Покрытие маслом" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-center text-white p-4">
+                            <h3 class="text-xl font-bold mb-2">Покрытие пола маслом</h3>
+                            <p>Коттедж, Московская область, 150 м²</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Смотреть все работы</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-16">Результаты нашей работы</h2>
+            
+            <div class="before-after mb-12 rounded-lg overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1600210492220-9eea0a12ec0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="До реставрации">
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="После реставрации">
+                    <div class="slider-handle"></div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-amber-700 mb-2">15+</div>
+                    <div class="text-gray-600">Лет опыта</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-amber-700 mb-2">500+</div>
+                    <div class="text-gray-600">Довольных клиентов</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold text-amber-700 mb-2">25 000+</div>
+                    <div class="text-gray-600">м² уложенных полов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6">О нашей компании</h2>
+                    <p class="text-gray-600 mb-6">Мы - команда профессионалов с многолетним опытом работы с деревянными напольными покрытиями. Наша миссия - создавать красивые, долговечные и экологичные полы, которые будут радовать вас долгие годы.</p>
+                    <p class="text-gray-600 mb-6">Мы используем только проверенные материалы от ведущих производителей и современное оборудование, что гарантирует высокое качество наших работ.</p>
+                    <p class="text-gray-600 mb-8">Каждый наш проект - это индивидуальный подход, внимание к деталям и стремление превзойти ожидания клиента.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center flex-1">
+                            <i class="fas fa-award text-3xl text-amber-700 mb-2"></i>
+                            <h3 class="font-bold mb-1">Гарантия</h3>
+                            <p class="text-sm text-gray-600">5 лет на все работы</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center flex-1">
+                            <i class="fas fa-leaf text-3xl text-amber-700 mb-2"></i>
+                            <h3 class="font-bold mb-1">Экологичность</h3>
+                            <p class="text-sm text-gray-600">Безопасные материалы</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center flex-1">
+                            <i class="fas fa-clock text-3xl text-amber-700 mb-2"></i>
+                            <h3 class="font-bold mb-1">Сроки</h3>
+                            <p class="text-sm text-gray-600">Соблюдаем всегда</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Наша команда" class="rounded-lg shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-amber-700 text-white p-6 rounded-lg shadow-lg hidden md:block">
+                        <div class="text-4xl font-bold">15 лет</div>
+                        <div>на рынке</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-16">Отзывы наших клиентов</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Анна Смирнова</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Заказывали укладку паркета в гостиной. Работа выполнена безупречно, все сроки соблюдены. Пол выглядит потрясающе! Спасибо за профессионализм."</p>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Иван Петров</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Реставрировали старый дубовый пол в загородном доме. Результат превзошел все ожидания - пол выглядит как новый. Очень аккуратная работа, без пыли и мусора."</p>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Елена Козлова</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Укладывали массивную доску во всей квартире. Мастера работали очень профессионально, давали ценные советы по уходу. Прошло уже 2 года - полы как новые."</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Оставить отзыв</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-amber-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Готовы преобразить ваши полы?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Оставьте заявку и получите бесплатный выезд специалиста для оценки объема работ и расчета стоимости</p>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-amber-800 font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Оставить заявку</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-amber-900 mb-16">Контакты</h2>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6 text-amber-800">Свяжитесь с нами</h3>
+                        
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Ваше имя</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Телефон</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Сообщение</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold mb-6 text-amber-800">Наши контакты</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Адрес</h4>
+                                    <p class="text-gray-600">г. Москва, ул. Деревянная, д. 15, оф. 42</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Телефон</h4>
+                                    <p class="text-gray-600">+7 (495) 123-45-67</p>
+                                    <p class="text-gray-600">+7 (926) 765-43-21</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@derevyannie-poly.ru</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Режим работы</h4>
+                                    <p class="text-gray-600">Пн-Пт: 9:00 - 19:00</p>
+                                    <p class="text-gray-600">Сб: 10:00 - 16:00</p>
+                                    <p class="text-gray-600">Вс: выходной</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Мы в социальных сетях</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-200 hover:bg-amber-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-vk"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-amber-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-amber-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-amber-600 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789919745!2d37.618130315930474!3d55.75367698055248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_QtdGC0YDQvtCy0YHQutCw0Y8g0YPQuy4sIDE1LCDQnNC-0YHQutCy0LAsINCc0L7RgdC60LLQsCwgMTI1MDQ3!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-tree text-amber-500 text-2xl mr-2"></i>
+                        <h2 class="text-xl font-bold">Деревянные полы</h2>
+                    </div>
+                    <p class="text-gray-400 mt-2">Профессиональная укладка и реставрация с 2008 года</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row md:space-x-10 space-y-4 md:space-y-0 text-center md:text-left">
+                    <div>
+                        <h3 class="font-bold mb-2">Услуги</h3>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Укладка паркета</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Реставрация полов</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Циклевка</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-2">Компания</h3>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">О нас</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Портфолио</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-2">Контакты</h3>
+                        <ul class="space-y-1">
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">+7 (495) 123-45-67</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">info@derevyannie-poly.ru</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-amber-500 transition">г. Москва, ул. Деревянная, д. 15</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Деревянные полы. Все права защищены.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating action button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+
+        // Before/After slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const handle = document.querySelector('.slider-handle');
+            let isDragging = false;
+
+            handle.addEventListener('mousedown', function(e) {
+                isDragging = true;
+                document.addEventListener('mousemove', moveSlider);
+                document.addEventListener('mouseup', stopDrag);
+            });
+
+            function moveSlider(e) {
+                if (!isDragging) return;
+                
+                const container = slider.parentElement;
+                const containerRect = container.getBoundingClientRect();
+                let newWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+                
+                // Limit between 5% and 95%
+                newWidth = Math.max(5, Math.min(95, newWidth));
+                
+                slider.style.width = newWidth + '%';
+            }
+
+            function stopDrag() {
+                isDragging = false;
+                document.removeEventListener('mousemove', moveSlider);
+                document.removeEventListener('mouseup', stopDrag);
+            }
+
+            // Touch support for mobile
+            handle.addEventListener('touchstart', function(e) {
+                isDragging = true;
+                document.addEventListener('touchmove', moveSliderTouch);
+                document.addEventListener('touchend', stopDragTouch);
+            });
+
+            function moveSliderTouch(e) {
+                if (!isDragging) return;
+                
+                const container = slider.parentElement;
+                const containerRect = container.getBoundingClientRect();
+                let newWidth = ((e.touches[0].clientX - containerRect.left) / containerRect.width) * 100;
+                
+                // Limit between 5% and 95%
+                newWidth = Math.max(5, Math.min(95, newWidth));
+                
+                slider.style.width = newWidth + '%';
+            }
+
+            function stopDragTouch() {
+                isDragging = false;
+                document.removeEventListener('touchmove', moveSliderTouch);
+                document.removeEventListener('touchend', stopDragTouch);
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
